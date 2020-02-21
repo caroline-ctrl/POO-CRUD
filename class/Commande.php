@@ -100,7 +100,7 @@ class Commande
      * set value $date
      * type: string
      */
-    public function setDate(string $date)
+    public function setDate(DateTime $date)
     {
         $this->date = $date;
     }
@@ -124,6 +124,6 @@ class Commande
     // }
 }
 
-$test = new Commande(['id' => 1, "nom" => "commande12", "date" => 2200221, "isDelivred" => 1]);
+$test = new Commande(['id' => 1, "nom" => "commande12", "date" => new DateTime(), "isDelivred" => 1]);
 var_dump($test);
 
