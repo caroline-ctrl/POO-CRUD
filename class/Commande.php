@@ -1,12 +1,13 @@
 <?php
 
+include('Client.php');
 class Commande
 {
     private $id;
     private $nom;
     private $date;
     private $isDelivred;
-    // private $prix;
+    private $fkClientId;
 
 
     /*******CONSTRUCT*****/
@@ -65,14 +66,14 @@ class Commande
         return $this->isDelivred;
     }
 
-    // /**
-    //  * return $isAvailable
-    //  * type : boolean
-    //  */
-    // public function getIsAvailable()
-    // {
-    //     return $this->isAvailable;
-    // }
+    /**
+     * return $fk_clientId
+     * type : Client
+     */
+    public function getFkClientId()
+    {
+        return $this->fkClientId;
+    }
 
 
 
@@ -114,16 +115,24 @@ class Commande
         $this->isDelivred = $isDelivred;
     }
 
-    // /**
-    //  * set value $prix
-    //  * type: float
-    //  */
-    // public function setPrix(float $prix)
-    // {
-    //     $this->prix = $prix;
+    /**
+     * set value $fk_ClientId
+     * type: Client
+     */
+    public function setFkClientId(Client $fkClientId)
+    {
+        $this->fkClientId = $fkClientId->getId();
+    }
+
+
+
+    /*********SPECIFIC METHOD*********/
+
+    // public function fkClientId(Client $clientId){
+    //     var_dump($clientId->getId());
     // }
 }
 
-$test = new Commande(['id' => 1, "nom" => "commande12", "date" => new DateTime(), "isDelivred" => 1]);
+$test = new Commande(['id' => 1, "nom" => "commande12", "date" => new DateTime(), "isDelivred" => 1, "fkClientId" => $client]);
 var_dump($test);
 

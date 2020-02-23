@@ -142,6 +142,8 @@ class Client
     }
 }
 
+$client = new Client(['id' => 456, "nom" => "kamel", "numClient" => 123, "adresse" => "12av", "telephone" => 0060606, "mail" => "lmdfk@lkjdf"]);
+
 
 // $test = new Client(['id' => 1, "nom" => "kamel", "numClient" => 123, "adresse" => "12av", "telephone" => 0060606, "mail" => "lmdfk@lkjdf"]);
 // var_dump($test);
