@@ -81,7 +81,7 @@ class CommandeProduit
      */
     public function setFkCommandeId(Commande $fkCommandeId)
     {
-        $this->fkCommandeId = $fkCommandeId;
+        $this->fkCommandeId = $fkCommandeId->getId();
     }
 
     /**
@@ -90,6 +90,9 @@ class CommandeProduit
      */
     public function setFkProduitId(Produit $fkProduitId)
     {
-        $this->fkProduitId = $fkProduitId;
+        $this->fkProduitId = $fkProduitId->getId();
     }
 }
+
+$test = new CommandeProduit(["id" => 1, "fkCommandeId" => $commande, "fkProduitId" => $produit]);
+var_dump($test);

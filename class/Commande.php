@@ -133,6 +133,6 @@ class Commande
     // }
 }
 
-$test = new Commande(['id' => 1, "nom" => "commande12", "date" => new DateTime(), "isDelivred" => 1, "fkClientId" => $client]);
-var_dump($test);
+$commande = new Commande(['id' => 1, "nom" => "commande12", "date" => new DateTime(), "isDelivred" => 1, "fkClientId" => $client]);
+// var_dump($commande);
 

@@ -141,6 +141,6 @@ class Produit
     }
 }
 
-$test = new Produit(['id' => 1, "nom" => "chocolat", "description" => "dlmsjflsjf", "quantity" => 12, "isAvailable" => 1, "prix" => 1.2]);
-var_dump($test);
+$produit = new Produit(['id' => 1, "nom" => "chocolat", "description" => "dlmsjflsjf", "quantity" => 12, "isAvailable" => 1, "prix" => 1.2]);
+// var_dump($produit);
 
